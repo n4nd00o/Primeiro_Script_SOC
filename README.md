@@ -1,11 +1,46 @@
-🛡️ SOC Audit Script | Automação de Segurança em Bash📝 Descrição do ProjetoEste projeto consiste em um script de automação desenvolvido para simular operações essenciais de um SOC (Security Operations Center). O objetivo é realizar auditorias rápidas em servidores, verificando a disponibilidade de serviços críticos e mantendo a higiene do sistema de arquivos através da limpeza de logs e arquivos temporários antigos.⚙️ Funcionalidades TécnicasAuditoria de Disponibilidade: Realiza verificações de status HTTP em tempo real usando curl.Gestão de Logs Dinâmica: Gera relatórios automáticos com timestamp (Auditoria_AAAA-MM-DD.log).Higiene de Sistema: Busca automática por arquivos com mais de 30 dias para otimização de armazenamento.Tratamento de Erros: Implementação de lógica condicional para interromper processos em caso de falha crítica (Exit Codes).🛠️ Ferramentas e Comandos UtilizadosComandoFunção no Scriptcurl -ICaptura apenas o cabeçalho HTTP para verificar se o site está online.findLocaliza arquivos baseando-se em filtros de tempo (-mtime) e tipo (-f).$?Captura o status de saída do último comando para validar o sucesso da operação.>>Redirecionamento de saída para anexar dados ao arquivo de log sem sobrescrever.&> /dev/nullDescarta saídas desnecessárias para manter o log limpo e focado no essencial.🧠 Aprendizados e Competências DesenvolvidasDesenvolver este script permitiu o aprofundamento em conceitos fundamentais de administração de sistemas Linux e Segurança da Informação:Lógica de Programação em Shell: Criação de funções modulares e estruturas de decisão (if/else).Automação de Tarefas (DevOps): Entendimento de como scripts podem substituir tarefas manuais repetitivas, reduzindo o erro humano.Monitoramento de Ativos: Aprendi a validar a integridade de serviços externos e a importância de monitorar o "uptime".Gerenciamento de Logs: Prática na criação de evidências para auditorias de conformidade (Compliance).Administração de Arquivos: Uso avançado do comando find para manutenção preventiva de storage.🚀 Como Executar o ScriptClone este repositório:Bashgit clone https://github.com/seu-usuario/seu-repositorio.git
-Entre na pasta:Bashcd seu-repositorio
-Dê permissão de execução:Bashchmod +x script_soc.sh
-Execute o script:Bash./script_soc.sh
-📂 Estrutura do Arquivo de LogO script gera um relatório organizado da seguinte forma:Plaintext--- Início da Auditoria: seg abr 13 19:00:00 -03 2026 ---
-1. Checando o status do serviço em https://www.google.com...
--> Status: OK
-3. Buscando arquivos antigos (mais de 30 dias)...
-./backup_antigo.zip
-./temp_log_2024.txt
-⭐ Gostou do projeto? Considere dar uma estrela neste repositório!
+# 🛡️ SOC Audit Script | Automação de Segurança e Auditoria
+
+![Bash](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Security](https://img.shields.io/badge/SOC-Operations-red?style=for-the-badge)
+
+## 📝 Sobre o Projeto
+Este repositório contém um script desenvolvido em **Bash** focado em tarefas críticas de um **SOC (Security Operations Center)**. A ferramenta automatiza a auditoria de disponibilidade de serviços web e a gestão de higiene de arquivos no sistema, garantindo que logs e arquivos antigos não comprometam a performance ou a segurança.
+
+---
+
+## ⚙️ Funcionalidades
+* **Monitoramento de Uptime:** Verificação instantânea de conectividade via protocolos HTTP/HTTPS.
+* **Log de Auditoria:** Geração automática de relatórios datados (`Auditoria_AAAA-MM-DD.log`).
+* **Gestão de Armazenamento:** Localização de arquivos com mais de 30 dias para conformidade com políticas de retenção.
+* **Tratamento de Erros:** Lógica de interrupção (`exit 1`) em caso de falha crítica de serviço.
+
+---
+
+## 🛠️ Tecnologias e Comandos Utilizados
+
+| Recurso | Aplicação no Script |
+| :--- | :--- |
+| **`curl -s -I`** | Realiza requisições silenciosas para validar o status do cabeçalho HTTP. |
+| **`find`** | Filtra e localiza arquivos por tipo (`-f`) e data de modificação (`-mtime`). |
+| **`Variables`** | Uso de variáveis dinâmicas para nomes de arquivos e URLs. |
+| **`Exit Codes`** | Captura do status de saída (`$?`) para validação de sucesso ou erro. |
+| **`Redirecionamento`** | Uso de `>>` para persistência de dados e `&> /dev/null` para limpeza de saída. |
+
+---
+
+## 🧠 Aprendizados Consolidados
+A construção deste script permitiu o desenvolvimento de competências técnicas em **DevOps** e **Cybersecurity**:
+
+* **Automação de Rotinas:** Entendimento de como substituir processos manuais por scripts escaláveis.
+* **Modularização de Código:** Criação de funções específicas (`checar_status`, `encontrar_arquivos`) para organização e reuso.
+* **Gestão de Incidentes:** Implementação de alertas simples via log para identificar serviços offline.
+* **Manipulação de File Systems:** Domínio de comandos de busca e filtragem profunda no Linux.
+
+---
+
+## 🚀 Como Utilizar
+
+1. **Clone este repositório:**
+   ```bash
+   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
