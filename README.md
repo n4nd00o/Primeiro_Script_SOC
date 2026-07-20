@@ -1,46 +1,57 @@
-# 🛡️ SOC Audit Script | Automação de Segurança e Auditoria
+🛡️ SOC Audit Script
 
-![Bash](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Security](https://img.shields.io/badge/SOC-Operations-red?style=for-the-badge)
+Script em Bash para automatizar verificações básicas de disponibilidade de serviços e gerar logs de auditoria em ambientes Linux.
 
-## 📝 Sobre o Projeto
-Este repositório contém um script desenvolvido em **Bash** focado em tarefas críticas de um **SOC (Security Operations Center)**. A ferramenta automatiza a auditoria de disponibilidade de serviços web e a gestão de higiene de arquivos no sistema, garantindo que logs e arquivos antigos não comprometam a performance ou a segurança.
+Este projeto foi desenvolvido durante meus estudos de Linux aplicado à Segurança da Informação e teve como objetivo praticar automação utilizando Shell Script.
 
----
+Objetivos
+Praticar programação em Bash
+Automatizar tarefas repetitivas
+Gerar registros simples de auditoria
+Aprender comandos essenciais do Linux utilizados em ambientes de infraestrutura e segurança
+Funcionalidades
 
-## ⚙️ Funcionalidades
-* **Monitoramento de Uptime:** Verificação instantânea de conectividade via protocolos HTTP/HTTPS.
-* **Log de Auditoria:** Geração automática de relatórios datados (`Auditoria_AAAA-MM-DD.log`).
-* **Gestão de Armazenamento:** Localização de arquivos com mais de 30 dias para conformidade com políticas de retenção.
-* **Tratamento de Erros:** Lógica de interrupção (`exit 1`) em caso de falha crítica de serviço.
+✔ Verificação de disponibilidade de um serviço utilizando HTTP
 
----
+✔ Geração automática de arquivo de log
 
-## 🛠️ Tecnologias e Comandos Utilizados
+✔ Busca por arquivos antigos utilizando find
 
-| Recurso | Aplicação no Script |
-| :--- | :--- |
-| **`curl -s -I`** | Realiza requisições silenciosas para validar o status do cabeçalho HTTP. |
-| **`find`** | Filtra e localiza arquivos por tipo (`-f`) e data de modificação (`-mtime`). |
-| **`Variables`** | Uso de variáveis dinâmicas para nomes de arquivos e URLs. |
-| **`Exit Codes`** | Captura do status de saída (`$?`) para validação de sucesso ou erro. |
-| **`Redirecionamento`** | Uso de `>>` para persistência de dados e `&> /dev/null` para limpeza de saída. |
+✔ Registro das atividades executadas
 
----
+Tecnologias utilizadas
+Bash
+Linux
+curl
+find
+Conceitos praticados
 
-## 🧠 Aprendizados Consolidados
-A construção deste script permitiu o desenvolvimento de competências técnicas em **DevOps** e **Cybersecurity**:
+Durante o desenvolvimento deste projeto foram utilizados conceitos como:
 
-* **Automação de Rotinas:** Entendimento de como substituir processos manuais por scripts escaláveis.
-* **Modularização de Código:** Criação de funções específicas (`checar_status`, `encontrar_arquivos`) para organização e reuso.
-* **Gestão de Incidentes:** Implementação de alertas simples via log para identificar serviços offline.
-* **Manipulação de File Systems:** Domínio de comandos de busca e filtragem profunda no Linux.
+criação de variáveis
+funções
+códigos de retorno ($?)
+redirecionamento de saída
+geração de logs
+automação de tarefas administrativas
+manipulação de arquivos
+Estrutura do projeto
+SOC_Audit_Script
+│
+├── Script_Funcionamento.sh
+└── README.md
+O que aprendi
 
----
+Com este projeto pude compreender melhor como automatizar tarefas administrativas em Linux utilizando Shell Script.
 
-## 🚀 Como Utilizar
+Além da programação em Bash, pratiquei comandos bastante utilizados em ambientes de infraestrutura e segurança, como curl, find, manipulação de logs e tratamento básico de erros.
 
-1. **Clone este repositório:**
-   ```bash
-   git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+Esse projeto representa meu primeiro contato com automação voltada para atividades relacionadas a SOC e administração de sistemas Linux.
+
+Melhorias futuras
+Adicionar validação de certificados SSL
+Monitorar múltiplos serviços
+Enviar alertas por e-mail
+Melhorar o tratamento de erros
+Tornar o script configurável por parâmetros
+Gerar logs mais detalhados
