@@ -1,57 +1,96 @@
-🛡️ SOC Audit Script
+# 🛡️ Primeiro Script SOC
 
-Script em Bash para automatizar verificações básicas de disponibilidade de serviços e gerar logs de auditoria em ambientes Linux.
+Projeto desenvolvido durante meus estudos de Linux, Shell Scripting e Segurança da Informação com o objetivo de compreender como tarefas rotineiras de um Security Operations Center (SOC) podem ser automatizadas utilizando Bash.
 
-Este projeto foi desenvolvido durante meus estudos de Linux aplicado à Segurança da Informação e teve como objetivo praticar automação utilizando Shell Script.
+Este projeto faz parte da minha evolução prática na área de Blue Team.
 
-Objetivos
-Praticar programação em Bash
-Automatizar tarefas repetitivas
-Gerar registros simples de auditoria
-Aprender comandos essenciais do Linux utilizados em ambientes de infraestrutura e segurança
-Funcionalidades
+---
 
-✔ Verificação de disponibilidade de um serviço utilizando HTTP
+# Objetivo
 
-✔ Geração automática de arquivo de log
+O principal objetivo deste projeto foi aprender os fundamentos de Shell Script aplicados à automação de tarefas simples de monitoramento e auditoria, utilizando ferramentas nativas do Linux.
 
-✔ Busca por arquivos antigos utilizando find
+O script foi desenvolvido como atividade prática durante meus estudos na plataforma Alura.
 
-✔ Registro das atividades executadas
+---
 
-Tecnologias utilizadas
-Bash
-Linux
-curl
-find
-Conceitos praticados
+# Funcionalidades
 
-Durante o desenvolvimento deste projeto foram utilizados conceitos como:
+- Verificação da disponibilidade de um serviço HTTP/HTTPS
+- Geração automática de arquivo de log
+- Registro da data e horário da auditoria
+- Busca por arquivos antigos utilizando o comando `find`
+- Demonstração da utilização de funções em Bash
+- Utilização de códigos de retorno (`Exit Code`) para validação de sucesso ou falha
 
-criação de variáveis
-funções
-códigos de retorno ($?)
-redirecionamento de saída
-geração de logs
-automação de tarefas administrativas
-manipulação de arquivos
-Estrutura do projeto
-SOC_Audit_Script
+---
+
+# Tecnologias utilizadas
+
+- Bash
+- Linux
+- Shell Script
+- Curl
+- Find
+
+---
+
+# Estrutura do projeto
+
+```
+Primeiro_Script_SOC/
 │
-├── Script_Funcionamento.sh
+├── Script_SOC.sh
 └── README.md
-O que aprendi
+```
 
-Com este projeto pude compreender melhor como automatizar tarefas administrativas em Linux utilizando Shell Script.
+---
 
-Além da programação em Bash, pratiquei comandos bastante utilizados em ambientes de infraestrutura e segurança, como curl, find, manipulação de logs e tratamento básico de erros.
+# Conceitos praticados
 
-Esse projeto representa meu primeiro contato com automação voltada para atividades relacionadas a SOC e administração de sistemas Linux.
+Durante o desenvolvimento deste projeto foram estudados conceitos como:
 
-Melhorias futuras
-Adicionar validação de certificados SSL
-Monitorar múltiplos serviços
-Enviar alertas por e-mail
-Melhorar o tratamento de erros
-Tornar o script configurável por parâmetros
-Gerar logs mais detalhados
+- Variáveis em Bash
+- Funções
+- Estruturas de decisão
+- Exit Codes
+- Manipulação de arquivos
+- Geração de logs
+- Automação de tarefas
+- Auditoria básica de sistemas Linux
+
+---
+
+# O que aprendi
+
+Este projeto me permitiu compreender como pequenas tarefas operacionais podem ser automatizadas utilizando Shell Script, reduzindo atividades repetitivas e facilitando processos de auditoria.
+
+Também serviu como introdução ao uso de scripts em ambientes Linux voltados para operações de Segurança da Informação.
+
+---
+
+# Possíveis melhorias
+
+Este projeto poderá evoluir futuramente com funcionalidades como:
+
+- Verificação de certificados SSL
+- Monitoramento de múltiplos serviços
+- Alertas por e-mail
+- Geração de logs em formato JSON
+- Integração com ferramentas de monitoramento
+- Melhor tratamento de erros
+- Parametrização via linha de comando
+
+---
+
+# Observações
+
+Este é um projeto de estudos.
+
+Seu objetivo é demonstrar meu processo de aprendizado em automação de tarefas utilizando Shell Script e Linux, não sendo uma ferramenta destinada ao uso em ambientes de produção.
+
+---
+
+# Licença
+
+Projeto disponibilizado apenas para fins educacionais.
